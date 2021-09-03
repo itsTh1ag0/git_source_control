@@ -1,3 +1,3 @@
 # ghubflow-project
-First repository for my versioning course at #Udemy
+First repository for my source control course at #Udemy
 Adding a third line
