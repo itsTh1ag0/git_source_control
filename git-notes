@@ -1,0 +1,66 @@
++----[SHA256]-----+
+Generating public/private ed25519 key pair.
+Your identification has been saved in /data/data/com.termux/files/usr/etc/ssh/ssh_host_ed25519_key
+Your public key has been saved in /data/data/com.termux/files/usr/etc/ssh/ssh_host_ed25519_key.pub
+The key fingerprint is:
+SHA256:wS66FxC2rVZEWwprHQ2MkEmXh06UEn8klQGXAipQ2CE u0_a599@localhost
+
+# gitKraken (GUI --for -L)
+# Zsh (z-shell) - Semi-GUI-CLI 
+# diff (tools): KDiff3, P4Merge, WinMerge, VSCode
+
+# Initializes local git resources
+git init
+# Valida o se instala la version de git
+git --version
+# Manages user&IDE level permissions
+git congig --global | --system | --local \
+user.name "namofuser" \
+user.email "mailofuser" \
+core.editor "<IDE> --wait"
+# Abre|Edita el archivo de git-config
+<IDE> ./.gitconfig
+# Fixing "Carriage return&End of Line" Windows<>Mac/Linux
+git config --global core.autocrlf <true|input>
+# Manual extendido y acortado
+git <cmd> --help | -h
+# Cambiar el nombre de la ruta estandar
+git config --global init.defaultBranch <name>
+# Check the current status (tracking) of files
+git status
+# Añadir archivos al seguimiento (tracking)
+git add <file-name>
+# Saving staged changes (snapshot)
+git commit -m "Some mess\age"
+# Remover archivo del rastreo (untrack)
+git rm --cached <file>
+# Add (stage) files in bulk
+git add *.extension || git add .
+# Borrar cambios en un archivo y regresar
+git restore <fileN> | git checkout <fileN>
+# Commits all files (un/staged)
+git commit -a
+# Muestra los archivos en 'stagging'
+git ls-files
+# Change file-names stag+work areas
+git mv fileoldn.1 filenwn.1
+# Añadir archivos y carpetas sin rastreo
+echo > /folder|file .gitignore
+# Showing short status
+git status -s
+# Ver las diferencias del código
+git diff --stagged fileWork fileStag
+git diff
+# Setting GUI diff over VSCode
+git config --global diff.tool vscode 
+git config --global difftool.vscode.cmd \
+"code --wait --dif $LOCAL $REMOTE"
+# Traer los apuntes (logs) de committing
+git log | git log --oneline --reverse
+# Seeing individual commits
+git show <commitId> | git HEAD˜<numRecursively>:<fileOrPath>
+git ls-tree
+# Deshacer cambios locales
+git clean -fd
+# Restoring deleted files from older commits
+git restore --source=HEAD˜1 <fileName>
